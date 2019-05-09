@@ -5,5 +5,5 @@ The first thing you need is python 3. To install python 3, download from [this l
 ## installing PYQT5
 Now that you have python, there is another important thing you need to run this project. To get PYQT5 on windows, download from [the following link](https://www.riverbankcomputing.com/software/pyqt/download5). On Mac and linux, either do brew install pyqt5 on mac  orsudo apt-get install python3-pyqt5 for linux. 
 ## building the project
-Next, clone the repository by doing the following command git clone https://github.com/ccowmu/CClub-snacks-.git. Next, navigate to the directory you put the repository in and do the following command to build python snack_ui.py.py. You know you built the app when you see a new window show up and see the UI onscreen. # CClub-snacks-
-This repository is home of the computer club Point of sale system. It is written in PYQT5. 
+Next, clone the repository by doing the following command git clone https://github.com/ccowmu/CClub-snacks-.git. Next, navigate to the directory you put the repository in and do the following command to build python snack_ui.py.py. You know you built the app when you see a new window show up and see the UI onscreen. 
+
