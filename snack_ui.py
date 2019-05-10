@@ -10,8 +10,11 @@ window = QWidget()
 layout = QVBoxLayout()
 # adds a button. 
 layout.addWidget(QPushButton('clear'))
-layout.addWidget(QPushButton('charge')) 
+layout.addWidget(QPushButton('charge'))
 layout.addWidget(QLabel('total'))
+QLabel.setAccessibleName=='total'
+
+
 # sets the window layout.
 window.setLayout(layout)
 # shows the window on screen. Without this you will have no window for your application. 
