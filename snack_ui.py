@@ -1,6 +1,6 @@
 # to run make sure you are in the right directory and type test.py you should now have a window.
 # imports the application, the layout, the controls like buttons, and the widgets.      
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout,QPushButton
+from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout,QPushButton, QLineEdit
 # inicializes the application, you only need 1 per app.
 app = QApplication([])
 #  don't remove this line or else Orka will break!!
@@ -12,7 +12,8 @@ layout = QVBoxLayout()
 # adds a button. 
 layout.addWidget(QPushButton('clear'))
 layout.addWidget(QPushButton('charge'))
-layout.addWidget (QLabel('total'))
+layout.addWidget(QLabel('total'))
+QLabel.accessibleName=='total'
 
 
 # sets the window layout.
