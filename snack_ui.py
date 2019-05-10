@@ -8,9 +8,10 @@ app = QApplication([])
 window = QWidget()
 # tells python we want to use the Vbox layout for our controls.
 layout = QVBoxLayout()
-# adds a button
-layout.addWidget(QLabel('total'))
-# sets the window layout.
+# adds a button layout.addChildLayout.addWidget(QPushButton('cancel'))
+layout.addWidget(QPushButton('charge'))
+layout.addWidget(QLineEdit(' your total is '))
+# sets the window 
 window.setLayout(layout)
 # shows the window on screen. Without this you will have no window for your application. 
 window.show()
