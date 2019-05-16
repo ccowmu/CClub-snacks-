@@ -5,14 +5,17 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout,QPushButton, QLin
 app = QApplication([])
 # makes a window for the application.
 window = QWidget()
-# tells python we want to use the Vbox layout for our controls.
+# tells python we   
+# want to use the Vbox layout for our controls.
 layout = QVBoxLayout()
 # adds  buttons and other UI elements to the app.
-
 layout.addWidget(QPushButton('charge'))
 layout.addWidget(QLineEdit(' your total is '))
-layout.addWidget(QPushButton('cancel'))
-# sets the window 
+
+
+
+
+# sets the window
 window.setLayout(layout)
 # shows the window on screen. Without this you will have no window for your application. 
 window.show()
