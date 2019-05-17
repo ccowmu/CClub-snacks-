@@ -10,14 +10,13 @@ layout = QVBoxLayout()
 # adds  buttons and other UI elements to the app.
 
 #QListWidget for displaying snack list at checkout
-snack_checkout = QListWidget()
+snacks=QListWidget()
+snacks.addItem("candy")
+snacks.addItem("popcorn")
+snacks.addItem("pop")
+snacks.show()
 
-snack_checkout.addItem("Hershey's bar")
-snack_checkout.addItem("Hershey's bar")
-snack_checkout.addItem("M&Ms")
-snack_checkout.addItem("Mountain Dew")
 
-listWidget.setWindowTitle('Total Snack Purchase(s)')
 
 layout.addWidget(QPushButton('charge'))
 layout.addWidget(QLineEdit(' your total is '))
