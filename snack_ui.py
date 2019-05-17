@@ -1,4 +1,4 @@
-# to run make sure you are in the right directory and type test.py you should now have a window.
+# to run make sure you are in the right directory and type  python snack_ui.py you should now have a window.
 # imports the application, the layout, the controls like buttons, and the widgets.      
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout,QPushButton, QLineEdit,QListWidget,QListWidgetItem, QListView
 # initializes the application, you only need 1 per app.
@@ -20,7 +20,7 @@ snacks=QListWidget()
 snacks.addItem("candy")
 snacks.addItem("popcorn")
 snacks.addItem("pop")
-snacks.show()
+layout.addWidget(snacks)
 
 # Sets the window
 window.setLayout(layout)
