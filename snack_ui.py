@@ -17,7 +17,7 @@ snack_checkout.addItem("Hershey's bar")
 snack_checkout.addItem("M&Ms")
 snack_checkout.addItem("Mountain Dew")
 
-listWidget.setWindowTitle('Total Snack Purchase(s)')
+snack_checkout.setWindowTitle('Total Snack Purchase(s)')
 
 layout.addWidget(QPushButton('charge'))
 layout.addWidget(QLineEdit(' your total is '))
