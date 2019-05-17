@@ -7,7 +7,13 @@ app = QApplication([])
 window = QWidget()
 # tells python we want to use the Vbox layout for our controls.
 layout = QVBoxLayout()
+
 # adds  buttons and other UI elements to the app.
+layout.addWidget(QPushButton('charge'))
+layout.addWidget(QPushButton('cancel'))
+
+# displays textbox for the users total.
+layout.addWidget(QLineEdit(' your total is '))
 
 #QListWidget for displaying snack list at checkout
 snacks=QListWidget()
@@ -16,13 +22,9 @@ snacks.addItem("popcorn")
 snacks.addItem("pop")
 snacks.show()
 
-
-
-layout.addWidget(QPushButton('charge'))
-layout.addWidget(QLineEdit(' your total is '))
-layout.addWidget(QPushButton('cancel'))
-# sets the window 
+# Sets the window
 window.setLayout(layout)
 # shows the window on screen. Without this you will have no window for your application. 
 window.show()
 app.exec_()
+#exits the app
