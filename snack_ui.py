@@ -1,30 +1,41 @@
-# to run make sure you are in the right directory and type  python snack_ui.py you should now have a window.
-# imports the application, the layout, the controls like buttons, and the widgets.      
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout,QPushButton, QLineEdit,QListWidget,QListWidgetItem, QListView
+#imports dependencies
+from PyQt5.QtWidgets import QApplication, QWidget,QGridLayout  ,QPushButton, QLineEdit,QListWidget,QListWidgetItem, QListView
 # initializes the application, you only need 1 per app.
 app = QApplication([])
 # makes a window for the application.
 window = QWidget()
-# tells python we want to use the Vbox layout for our controls.
-layout = QVBoxLayout()
 
-# adds  buttons and other UI elements to the app.
-layout.addWidget(QPushButton('charge'))
-layout.addWidget(QPushButton('cancel'))
+#declares variables for our UI 
+total=QLineEdit('your total is')
+charge=QPushButton('charge')
+cancel=QPushButton('cancel')
 
-# displays textbox for the users total.
-layout.addWidget(QLineEdit(' your total is '))
+# tells python to use the grid layout class.
+grid_layout = QGridLayout()
+grid_layout.setSpacing(10)
+grid_layout.addWidget(charge, 1,0)
+grid_layout.addWidget(cancel, 1,3)
+grid_layout.addWidget(total, 1,2)
 
 #QListWidget for displaying snack list at checkout
-snacks=QListWidget()
-snacks.addItem("candy")
-snacks.addItem("popcorn")
-snacks.addItem("pop")
-layout.addWidget(snacks)
 
-# Sets the window
-window.setLayout(layout)
-# shows the window on screen. Without this you will have no window for your application. 
+#adds dictionary for generation of snack buttons.  
+snacks=QListWidget()
+popcorn={ 'name': 'popcorn', 'type': 'snack', 'cost': '0.25',}
+button=""
+for key in popcorn:
+	button=button+str(popcorn[key])
+snack_buttons=QPushButton(button)
+grid_layout.addWidget(snack_buttons)
+
+pop={ 'name': 'pop', 'type': 'drink', 'cost': '0.50',}
+p_button=""
+for key in pop:
+ 	p_button=p_button+str(pop[key])
+p_button=QPushButton(p_button)
+`grid_layout.addWidget(p_button)
+
+# code which is needed to exit any app.
+window.setLayout(grid_layout)
 window.show()
 app.exec_()
-#exits the app
