@@ -15,13 +15,31 @@
      cell2.innerHTML=cost;
      cell3.innerHTML="1";
      cell4.innerHTML=cost;  
-               }
+         }
+
+function remove() {
+
+  document.getElementById("checkout").deleteRow(1);
+
+}
+function cancelMessage()
+{
+   remove();
+    document.getElementById('message').innerHTML='you canceled your order.';
+}
+function chargeMessage()
+{
+   remove();
+document.getElementById("message").innerHTML="thankyou for your order";
+}
+
+
       </script>
    </head>
 <body>
 <h1>cclub snacks </h1>
-<button type="button" >  charge </button>
-<button type="button">cancel</button>
+<button type="button"  onclick="chargeMessage()">  charge </button>
+<button type="button" onclick="cancelMessage()">cancel</button>
 <button type="button" onclick="row('popcorn','0.25')">popcorn</button>
 <button type="button" onclick="row('pop','0.50')">pop</button>
 <div align="right">
@@ -36,7 +54,7 @@
    <td>popcorn</td>
    <td>0.25</td>
    <td  >1</td>
-   <td>0.25</td   >
+   <td>0.25</td>
    
 </tr>
 <tr>
@@ -49,5 +67,6 @@
 </table>
 </div>
 
+<h5 id="message">please place your order</h5>
 </body>
 </html>
