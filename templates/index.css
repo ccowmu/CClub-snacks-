@@ -1,0 +1,29 @@
+button{
+	margin: 3vh;
+	height: 10vh;
+	width: 10vw;
+	font-size: 1.5vw;
+}
+h1{
+	font-size: 50pt;
+	text-align: center;
+}
+h2{
+	font-size: 38pt;
+	text-align: center;
+}
+h3{
+	font-size: 24pt;
+}
+.fixed_options{
+	float: left;
+	padding: 20px;
+	background-color: #87CEFA;
+	background-size: fill;
+}
+.options{
+	/*overflow used to give div scrollbar*/
+	overflow: auto;
+	height: 70vh;
+	width: 50vw;
+}
