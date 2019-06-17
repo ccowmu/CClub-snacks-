@@ -15,6 +15,20 @@ h2{
 h3{
 	font-size: 24pt;
 }
+td{
+	font-size: 18pt;
+	padding-right: 10pt;
+}
+tr{
+	font-size: 20pt;
+	padding-right: 10pt;
+	width: 10px;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
 .fixed_options{
 	float: left;
 	padding: 20px;
@@ -26,4 +40,16 @@ h3{
 	overflow: auto;
 	height: 70vh;
 	width: 50vw;
+}
+.right{
+	float: center;
+	margin-left: 5vw;
+}
+.right_table{
+	overflow: auto;
+	table-layout: fixed;
+	text-align: center;
+}
+.right_table, th, td{
+	border: 1px solid black;
 }
