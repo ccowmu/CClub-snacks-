@@ -1,55 +1,174 @@
 button{
-	margin: 3vh;
-	height: 10vh;
-	width: 10vw;
-	font-size: 1.5vw;
+	outline: none;
 }
-h1{
+h1{ /*Green box*/
 	font-size: 50pt;
 	text-align: center;
+	background-color: #9CC5A1;
 }
 h2{
 	font-size: 38pt;
 	text-align: center;
+	color: #DCE1DE;
 }
 h3{
-	font-size: 24pt;
+	font-size: 38pt;
+	color: #DCE1DE;
+}
+h4{
+	font-size: 28pt;
+	color: #DCE1DE;
 }
 td{
-	font-size: 18pt;
-	padding-right: 10pt;
-}
-tr{
 	font-size: 20pt;
 	padding-right: 10pt;
+}
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+/*  background-color: #216869;*/
+  /*border: 3px solid black;*/
+}
+tr{
+	font-size: 24pt;
+	padding-right: 10pt;
 	width: 10px;
+}
+tr, td, th{
+	padding: 2vh;
+}
+.cancel{
+	background-color:#eb4646;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:4px solid #ab1919;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	padding:16px 31px;
+	margin: 1.5em 2em 1.5em 0em;
+	text-decoration:none;
+	text-shadow:2px 3px 3px #000000;
+}
+.cancel:active{
+	position:relative;
+	top:1px;
+}
+.cancel:hover{
+	background-color:#cc3333;
+}
+.confirmation_buttons{
+	margin-top: 5vh;
+	margin: 0 auto;
 }
 .container{
 	display: flex;
 	flex-wrap: wrap;
-	align-content: space-between;
+	align-content: stretch;
 }
-.fixed_options{
-	float: left;
+.fixed_options{ /*Blue box*/
 	padding: 20px;
-	background-color: #87CEFA;
+	background-color: #216869;
 	background-size: fill;
+	box-shadow: 10px 7px 10px #888888;
 }
-.options{
+.option{
+	-moz-box-shadow: 3px 4px 0px 0px #276873;
+	-webkit-box-shadow: 3px 4px 0px 0px #276873;
+	box-shadow: 3px 4px 0px 0px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.option:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.option:active {
+	position:relative;
+	top:1px;
+}
+.option_list{
 	/*overflow used to give div scrollbar*/
 	overflow: auto;
 	height: 70vh;
 	width: 50vw;
 }
-.right{
+.purchase{
+	background-color:#44c767;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:4px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:3px 2px 3px #040803;
+}
+.purchase:active{
+	position: relative;
+	top: 1px;
+}
+.purchase:hover{
+	background-color: #49e372;
+}
+.right{ /*Orange box*/
 	float: center;
 	margin-left: 5vw;
+	background-color: #216869;
+	box-shadow: 10px 10px 10px #888888;
+	height: 70vh;
 }
 .right_table{
 	overflow: auto;
 	table-layout: fixed;
 	text-align: center;
 }
-.right_table, th, td{
-	border: 1px solid black;
+.right_table, th{
+	/*border-bottom: 3px solid black;*/
+}
+.rtable_scroll{
+	overflow-y: auto;
+	height: 30vh;
+}
+.user{
+	text-align: right;
+	margin-right: 3vw;
+/*	border-right: 6px solid #87CEFA;
+  	background-color: #87CEFA;*/
+}
+.wrapper{
+	text-align: center;
 }
