@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+<script type="text/javascript" src = "../static/javascript/script.js"></script>
 	<body>
 		<h1>cclub snacks </h1>
 		<div class="container">
 		<div class="fixed_options">
 		<div class="option_list">
 			<h2>Choose Your Snack</h2>
-			<h4 class="section">Candy</h4>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option"> popcorn</button>
-			<h4 class="section">Candy</h4>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-			<h4 class="section">Candy</h4>
-				<button type="button" class="option">charge</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option"> popcorn</button>
-				<button type="button" class="option"> popcorn</button>
-			<h4 class="section">Candy</h4>
-				<button type="button" class="option">popcorn</button>
-			<h4 class="section">Candy</h4>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
-				<button type="button" class="option">popcorn</button>
+			<h3 class="section">Candy</h3>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+			<h3 class="section">Candy</h3>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+			<h3 class="section">Candy</h3>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+			<h3 class="section">Candy</h3>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+			<h3 class="section">Candy</h3>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
+				<button type="button" class="option" onclick="insert('popcorn', 0.25)">popcorn(0.25)</button>
 		</div>
 		</div>
 <div class="container">
@@ -35,74 +35,20 @@
 	<h3 class="user">User $$$</h3>
 	<br>
 	<div class="rtable_scroll">
-	<table class="right_table">
-   		<tr>
+	<table class="right_table" id="checkout">
+   		<tr class="table_row">
 			<th scope="col">Item</th>
 			<th scope="col">Unit Cost</th>
 			<th scope="col">Quantity</th>
 			<th scope="col">Total</th>
 		</tr>
-		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
-   		<tr>
-			<td>Popcorn</td>
-			<td>0.25</td>
-			<td>2</td>
-			<td>0.50</td>
-   		</tr>
 	</table>
 </div>
 	<br>
 	<div class="wrapper">
 	<div class="confirmation_buttons">
-	<button type="button" class="cancel">CANCEL</button>
-	<button type="button" class="purchase">PURCHASE</button>
+	<button type="button" class="cancel" onclick= "remove()">CANCEL</button>
+	<button type="button" class="purchase" onclick= "remove()">PURCHASE</button>
 </div>
 </div>
 </div>
