@@ -21,3 +21,21 @@ class Product(db.Model):
 
     def get_productName(self):
         return unicode(self.productName)
+
+class Member(db.Model):
+    memberID = db.Column(db.String(45), primary_key=True)
+    nick = db.Column(db.String(45), index=True, unique=True)
+    tab = db.Column(db.DECIMAL())
+
+    def __repr__(self):
+        return '<Member {}>'.format(self.username)
+
+class Transactions(db.Model):
+    transactionID = db.Column(db.Integer, primary_key=True)
+    memberID = db.Column(db.String(45), index=True, unique=True)
+    productName = db.Column(db.String(45), index=True, unique=True)
+    quantity = db.Column(db.Integer)
+    purchaseDate = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Transactions {}>'.format(self.username)
