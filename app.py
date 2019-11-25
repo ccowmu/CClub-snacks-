@@ -22,7 +22,8 @@ with app.app_context():
 @app.route('/')
 #@login_required
 def index():
-    return render_template('index.html')
+    products = Product.query.all()
+    return render_template('index.html', products=products)
 
 
 @app.route("/login", methods=["GET", "POST"])
