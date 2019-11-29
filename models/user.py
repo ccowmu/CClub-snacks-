@@ -26,9 +26,19 @@ class Member(db.Model):
     memberID = db.Column(db.String(45), primary_key=True)
     nick = db.Column(db.String(45), index=True, unique=True)
     tab = db.Column(db.DECIMAL())
+    username = nick
 
     def __repr__(self):
-        return '<Member {}>'.format(self.username)
+        return '{}'.format(self.username)
+
+    def is_authenticated(self):
+        return True
+    
+    def is_active(self):
+        return True
+
+    def get_id(self):
+        return self.memberID
 
 class Transactions(db.Model):
     transactionID = db.Column(db.Integer, primary_key=True)
