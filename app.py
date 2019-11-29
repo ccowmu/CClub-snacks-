@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, flash, url_for
-from flask_login import LoginManager, login_required, login_user, logout_user
-from models.user import Product, db
+from flask_login import LoginManager, login_required, login_user, logout_user, current_user
+from models.user import Product, Member, db
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -20,10 +20,12 @@ with app.app_context():
     db.create_all()
 
 @app.route('/')
-#@login_required
+@login_required
 def index():
     products = Product.query.all()
-    return render_template('index.html', products=products)
+    print(current_user)
+    #registered_member = registered_member
+    return render_template('index.html', products=products,user=current_user)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -36,19 +38,18 @@ def login():
         return render_template('login.html')
 
     # get the form data
-    username = request.form['username']
-    password = request.form['password']
+    memberID = request.form['memberID']
 
-    # query the user
-    registered_user = User.query.filter_by(username=username).first()
+    # query the member
+    registered_member = Member.query.filter_by(memberID=memberID).first()
 
     # check the passwords
-    if registered_user is None and password != registered_user.password:
-        flash('Invalid Username/Password')
+    if registered_member is None :
+        flash('Invalid Member ID')
         return render_template('login.html')
 
     # login the user
-    login_user(registered_user)
+    login_user(registered_member)
     return redirect(request.args.get('next') or url_for('index'))
 
 
@@ -59,10 +60,10 @@ def register():
         return render_template('register.html')
 
     # get the data from our form
-    password = request.form['password']
-    conf_password = request.form['confirm-password']
-    username = request.form['username']
-    email = request.form['email']
+    #password = request.form['password']
+    #conf_password = request.form['confirm-password']
+    username = request.form['memberID']
+    #email = request.form['email']
 
     # make sure the password match
     if conf_password != password:
@@ -103,7 +104,12 @@ def logout():
 # required function for loading the right user
 @login_manager.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+    return Member.query.get(int(id))
+
+# load nickname
+#@login_manager.user_loader
+#def load_nick(id):
+#    return Member.query.get(int(id))
 
 
 if __name__ == '__main__':
